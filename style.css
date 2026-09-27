@@ -17,3 +17,86 @@
 .dog-photo-card{padding:16px;display:block;text-align:left}.dog-photo-card span{display:block;margin:2px 4px 12px}.dog-photo-card img{width:100%;height:380px;object-fit:cover;border-radius:18px;display:block}.dog-photo-card p{margin:12px 4px 2px;font-family:Georgia,serif;font-size:24px;color:var(--green)}@media(max-width:560px){.dog-photo-card img{height:320px}}
 
 .wish-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:70px;align-items:center}.wish-copy>p:last-child{max-width:650px;font-size:19px;color:#eee5ef}.wish-portrait{justify-self:end;width:min(30vw,390px);aspect-ratio:1/1;border-radius:28px;overflow:hidden;box-shadow:0 28px 60px rgba(49,34,53,.28);border:1px solid rgba(255,255,255,.18);transform:rotate(1deg)}.wish-portrait img{width:100%;height:100%;object-fit:cover;display:block}@media(max-width:850px){.wish-hero{grid-template-columns:1fr;gap:35px}.wish-portrait{justify-self:start;width:min(70vw,360px);transform:none}}@media(max-width:560px){.wish-portrait{width:min(82vw,320px);border-radius:22px}}
+
+/* Mobile navigation + responsive polish */
+.menu-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:var(--white);align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;cursor:pointer}
+.menu-toggle span{width:20px;height:2px;background:var(--green);display:block;transition:.2s}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:760px){
+  body{overflow-x:hidden}
+  .ticker{padding:7px 12px;font-size:8px;line-height:1.35;letter-spacing:.08em}
+  .ticker span{display:block;margin:0 0 2px}
+  .site-header{height:64px;padding:0 16px;position:sticky;top:0;align-items:center;gap:12px}
+  .logo{font-size:13px;white-space:nowrap;z-index:32}
+  .menu-toggle{display:flex;margin-left:auto;z-index:32}
+  .site-header nav{display:none;position:absolute;left:0;right:0;top:64px;background:rgba(251,247,240,.98);border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(39,31,22,.12);padding:10px 16px 18px;flex-direction:column;gap:0;z-index:31}
+  .site-header nav.open{display:flex}
+  .site-header nav a{font-size:15px;padding:13px 4px;border-bottom:1px solid rgba(217,205,188,.7)}
+  .site-header nav a:last-child{border-bottom:0}
+  .site-header nav a.active:after{display:none}
+  .site-header nav a.active{color:var(--rust)}
+  
+  .hero{grid-template-columns:1fr;min-height:auto;padding:56px 20px 52px;gap:34px}
+  .hero h1{font-size:clamp(54px,17vw,72px);line-height:.83;margin-bottom:24px}
+  .lead{font-size:17px;line-height:1.55}
+  .badges{margin:22px 0 24px}
+  .badges span{font-size:10px;padding:7px 10px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .button{text-align:center;width:100%}
+  .countdown-card{width:100%;max-width:none;padding:22px;transform:none;border-radius:22px}
+  .status{font-size:22px;margin-bottom:20px}
+  .countdown strong{font-size:30px}
+  .home-intro{padding:58px 20px}
+  .home-intro h2{font-size:39px}
+  
+  .page-hero,.travel-cover,.dogs-cover{min-height:auto!important;padding:54px 20px!important}
+  .page-hero h1,.travel-cover h1,.dogs-cover h1{font-size:clamp(52px,17vw,70px)!important;line-height:.84!important;margin-bottom:24px}
+  .page-hero>p:last-child,.wish-copy>p:last-child,.dogs-cover>div>p:last-child{font-size:16px!important}
+  
+  .content-shell,.journey,.catalog,.dog-report{padding:52px 16px!important}
+  .cards,.wish-grid{grid-template-columns:1fr!important;gap:16px}
+  .activity-card{padding:22px;border-radius:19px}
+  .activity-image{width:calc(100% + 44px);margin:-22px -22px 18px;height:210px}
+  .activity-card h3{font-size:28px}
+  .activity-card dl div{font-size:12px}
+  
+  .travel-cover{display:block}
+  .travel-portrait{position:relative!important;right:auto!important;top:auto!important;width:58vw!important;max-width:230px!important;height:280px!important;margin:28px 0 18px!important;transform:none!important}
+  .page-resa .departure{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;min-width:0!important;width:100%;max-width:360px;margin:0!important;padding:20px 22px}
+  .departure strong{font-size:36px}
+  .journey-intro{margin-bottom:50px}
+  .journey-intro h2{font-size:40px}
+  .timeline{margin-left:6px}
+  .timeline article{grid-template-columns:1fr!important;gap:7px!important;padding:0 0 42px 24px!important}
+  .timeline h3{font-size:27px}
+  .timeline p{font-size:14px}
+  .travel-disclaimer{font-size:9px;line-height:1.6}
+  
+  .wish-hero{display:grid!important;grid-template-columns:1fr!important;gap:28px!important}
+  .wish-copy{min-width:0}
+  .wish-portrait{justify-self:start!important;width:min(78vw,300px)!important;aspect-ratio:1/1!important;transform:none!important;border-radius:22px!important}
+  .catalog-head{align-items:flex-start;gap:15px;flex-direction:column}
+  
+  .dogs-cover{grid-template-columns:1fr!important;gap:26px}
+  .dog-big{font-size:76px!important;text-align:left!important}
+  .dog-report{grid-template-columns:1fr!important;gap:35px!important}
+  .dog-photo-card{min-height:0!important;padding:12px}
+  .dog-photo-card img{height:auto!important;aspect-ratio:4/5;object-fit:cover}
+  .report-stats dl div{gap:18px}
+  .report-stats dd{text-align:right}
+  
+  footer{padding:35px 20px;gap:12px}
+  footer p{text-align:left}
+  .modal-card{width:100%;padding:28px 22px}
+  .modal-card h2{font-size:34px}
+}
+
+@media(max-width:380px){
+  .hero h1,.page-hero h1,.travel-cover h1,.dogs-cover h1{font-size:50px!important}
+  .logo{font-size:12px}
+  .countdown-card{padding:18px}
+  .countdown strong{font-size:27px}
+}
