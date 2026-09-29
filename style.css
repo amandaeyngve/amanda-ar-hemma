@@ -100,3 +100,17 @@
   .countdown-card{padding:18px}
   .countdown strong{font-size:27px}
 }
+
+/* Wishlist product cards */
+.wish-item{padding:0!important;overflow:hidden;display:flex;flex-direction:column;min-height:100%;background:#f8f3f8!important}
+.wish-item-image{width:100%;height:240px;object-fit:cover;display:block;border-bottom:1px solid #d6c7d9}
+.wish-item-body{padding:25px 28px 28px;display:flex;flex-direction:column;flex:1}
+.wish-item-body h3{margin:8px 0 10px}
+.wish-item-body p{margin:0 0 22px;flex:1}
+.wish-link{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;background:var(--purple);color:#fff;text-decoration:none;font-size:12px;font-weight:900;border-radius:999px;padding:11px 16px;transition:.2s}
+.wish-link:hover{transform:translateY(-2px);filter:brightness(.95)}
+@media(max-width:760px){
+  .wish-item-image{height:220px}
+  .wish-item-body{padding:22px}
+  .wish-link{width:100%}
+}
